@@ -1,0 +1,23 @@
+Polimorfizm: DomesticFlight ve InternationalFlight sınıfları, Flight sınıfından türedi.
+Bu sınıfların getFlightDetails metodunu kendi ihtiyaçlarına göre özelleştirmeleri sağlandı.
+
+Generik Yapı: FlightReservationSystem sınıfı, tüm türlerdeki uçuşları kabul edebilecek şekilde generik hale getirildi.
+Bu sayede hem DomesticFlight hem de InternationalFlight sınıfları ile çalışılabilir.
+
+
+
+1. Polymorphism (Çok Biçimlilik)
+Polymorphism, aynı metodun farklı sınıflarda farklı şekilde çalışmasını sağlar. Burada Flight sınıfı ve onun alt sınıfları olan DomesticFlight ve InternationalFlight sınıfları arasında polymorphism kullanılmıştır.
+
+Flight sınıfının bir getFlightDetails() metodu var. Ancak, DomesticFlight ve InternationalFlight sınıfları bu metodu kendi ihtiyaçlarına göre override ediyorlar.
+Polymorphism'in kullanıldığı yerler:
+Flight sınıfı temel sınıf olarak, tüm uçuş türlerinin ortak metodlarını barındırıyor.
+DomesticFlight ve InternationalFlight sınıfları, getFlightDetails() metodunu override ederek, farklı uçuş türleri için özelleştirilmiş detaylar döndürüyorlar.
+
+
+
+2. Generic Class (Generik Sınıf)
+Generic sınıflar, sınıfların tür parametreleri alarak birden fazla tür ile çalışmasına olanak tanır. FlightReservationSystem sınıfında T extends Flight kullanılarak generic yapı kullanılmıştır. Bu sayede, FlightReservationSystem sınıfı, sadece Flight sınıfı ve onun alt sınıfları ile çalışacak şekilde esnek hale getirilmiştir.
+
+Generic Class'in kullanıldığı yerler:
+FlightReservationSystem sınıfı, T tür parametresini alarak Flight ve türevlerini parametre olarak alacak şekilde tasarlanmıştır.
